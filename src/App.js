@@ -3,6 +3,7 @@ import './Stylesheets/App.css'
 import background from './Stylesheets/Images/background.jpg'
 import holidayData from './Data'
 import HolidayInformation from './Components/HolidayInformation'
+import SortButtons from './Components/SortButtons'
 import { alphaSort } from './utils'
 
 class App extends Component {
@@ -19,11 +20,8 @@ class App extends Component {
     }
     return (
       <div style={style} className='App'>
-        <div className="SortButtons">
-          <button value='title' onClick={(e) => this.handleClick(e.target.value)}>sort alphabetically</button>
-          <button value='price' onClick={(e) => this.handleClick(e.target.value)}>sort by price</button>
-          <button value='rating' onClick={(e) => this.handleClick(e.target.value)}>sort by star rating</button>
-        </div>
+      <SortButtons handleClick={this.handleClick} />
+        
 
         <HolidayInformation 
         toggleReverse={this.state.toggleReverse}
