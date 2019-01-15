@@ -12,11 +12,11 @@ class App extends Component {
     holidayData,
     toggleReverse: false,
     sortValue: 'price',
-    showDescription: false
+    showDescription: false,
   }
 
   render() {
-    const { sortValue, toggleReverse, holidayData, showDescription } = this.state
+    const { sortValue, toggleReverse, holidayData, showDescription, holidayElement } = this.state
     const style = {
       backgroundImage: `url(${background})`
     }
@@ -26,6 +26,7 @@ class App extends Component {
         sortValue={sortValue}
         handleClick={this.handleClick} />
         <HolidayInformation
+        holidayElement={holidayElement}
         showDescription={showDescription}
         toggleDescription={this.toggleDescription}
         toggleReverse={toggleReverse}
@@ -49,9 +50,11 @@ class App extends Component {
     })
   }
   
-  toggleDescription = (e) => {
+  toggleDescription = (holidayElement) => {
+    // console.log(e)
     this.setState({
-      showDescription: !this.state.showDescription
+      showDescription: !this.state.showDescription,
+      holidayElement
     })
   }
 }

@@ -2,13 +2,17 @@ import React from 'react'
 import stars from '../Stylesheets/Images/gold-stars.png'
 import '../Stylesheets/HolidayInformation.css'
 
-const HolidayInformation = ({ holidayData, toggleReverse, toggleDescription, showDescription }) => {
+const HolidayInformation = ({ 
+  holidayData, toggleReverse, 
+  toggleDescription, showDescription, holidayElement }) => {
 
     const thumbnailOrder = toggleReverse ? 'column-reverse' : 'column'
     const style = {
         flexDirection: thumbnailOrder,
         display: 'flex'
     }
+
+    const arrow = !showDescription ? 'right' : 'down'
 
     return (<div style={style} className="FullHolidayOrder">
          {holidayData.map((info, i) => {
@@ -30,7 +34,8 @@ const HolidayInformation = ({ holidayData, toggleReverse, toggleDescription, sho
               </div>
               <div className='HolidaySpecifications'>
                 <p><span>{info.date}</span> for <span>{info.days}</span> from <span>{info.airport}</span>, <span>{info.specification}</span></p>
-                <i onClick={() => toggleDescription()} className='fas fa-angle-right'></i>
+                <i onClick={() => toggleDescription(i)} className={`fas fa-angle-${arrow}`}></i>
+              {holidayElement === i && showDescription && <p>DESCRIPTION</p>}
               </div>
             </div>
           )
