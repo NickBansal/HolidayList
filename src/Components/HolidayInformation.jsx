@@ -2,8 +2,15 @@ import React from 'react'
 import stars from '../Stylesheets/Images/gold-stars.png'
 import '../Stylesheets/App.css'
 
-const HolidayInformation = ({ holidayData }) => {
-    return (<div>
+const HolidayInformation = ({ holidayData, toggleReverse }) => {
+
+    const thumbnailOrder = toggleReverse ? 'column-reverse' : 'column'
+    const style = {
+        flexDirection: thumbnailOrder,
+        display: 'flex'
+    }
+
+    return (<div style={style} className="FullHolidayOrder">
          {holidayData.map((info, i) => {
           return (
             <div key={i} className='HolidayInformation'>

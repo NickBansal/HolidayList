@@ -125,3 +125,7 @@ span {
 .SortButtons button {
   width: 30%;
 }
+
+.FullHolidayOrder {
+  display: flex
+}

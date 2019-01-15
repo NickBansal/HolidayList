@@ -7,7 +7,9 @@ import HolidayInformation from './Components/HolidayInformation'
 class App extends Component {
 
   state = {
-    holidayData
+    holidayData,
+    toggleReverse: false,
+    sortValue: 'title'  
   }
 
   render() {
@@ -16,20 +18,33 @@ class App extends Component {
     }
     return (
       <div style={style} className='App'>
-      <div className="SortButtons">
-      <button value='title' onClick={(e) => this.handleClick(e.target.value)}>sort alphabetically</button>
-      <button value='price' onClick={(e) => this.handleClick(e.target.value)}>sort by price</button>
-      <button value='rating' onClick={(e) => this.handleClick(e.target.value)}>sort by star rating</button>
-      </div>
-      <HolidayInformation holidayData={this.state.holidayData}/>
+        <div className="SortButtons">
+          <button value='title' onClick={(e) => this.handleClick(e.target.value)}>sort alphabetically</button>
+          <button value='price' onClick={(e) => this.handleClick(e.target.value)}>sort by price</button>
+          <button value='rating' onClick={(e) => this.handleClick(e.target.value)}>sort by star rating</button>
+        </div>
+
+        <HolidayInformation 
+        toggleReverse={this.state.toggleReverse}
+        holidayData={this.state.holidayData} />
       </div>
     );
   }
 
   handleClick = value => {
-    const { holidayData } = this.state
+    const { holidayData, sortValue, toggleReverse } = this.state
+
+    const newToggleReverse = sortValue !== value ? false : !toggleReverse
+
+
+    const filteredHolidayData = value === 'title' ?
+      holidayData.sort((a, b) => b[value.toLowerCase()] - a[value.toLowerCase()])
+      : holidayData.sort((a, b) => b[value] - a[value])
+
     this.setState({
-      holidayData: holidayData.sort((a, b) => b[value] - a[value])
+      holidayData: filteredHolidayData,
+      toggleReverse: newToggleReverse,
+      sortValue: value
     })
   }
 }
