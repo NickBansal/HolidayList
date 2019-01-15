@@ -113,3 +113,15 @@ span {
   width: 15px;
   display: inline-block
 }
+
+.SortButtons {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px
+}
+
+.SortButtons button {
+  width: 30%;
+}
