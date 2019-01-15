@@ -1,7 +1,9 @@
 .App {
   text-align: center;
-  height: 100vh;
-  padding: 40px
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 
 .App h1 {
@@ -9,10 +11,21 @@
 }
 
 .HolidayInformation {
-  margin: 40px
+  margin: 20px;
+  position: relative;
+  height: 300px;
+  width: 400px;
 }
 
 .HolidayInformation img {
-  height: 200px;
-  width: 350px;
+  height: 100%;
+  width: 100%;
 } 
+
+.HoldiayInformationTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #add8e6d9;
+}

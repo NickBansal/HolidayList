@@ -9,12 +9,18 @@ class App extends Component {
       backgroundImage: `url(${background})`
     }
     return (
-      <div style={style} className="App">
+      <div style={style} className='App'>
         {console.log(holidayData)}
         {holidayData.map((info, i) => {
           return (
-            <div key={i} className="HolidayInformation">
-              <img src={info.img} alt="Holiday"/>
+            <div key={i} className='HolidayInformation'>
+              <img src={info.img} alt='Holiday'/>
+              <div className='HoldiayInformationTitle'>
+                <p>{info.title}</p>
+              </div>
+              <div className="HolidaySpecifications">
+              <i class="fas fa-angle-right"></i>
+              </div>
             </div>
           )
         })}
