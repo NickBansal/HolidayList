@@ -38,7 +38,7 @@ class App extends Component {
     const filteredHolidayData = value === 'title' ?
       holidayData.sort(alphaSort) :
       holidayData.sort((a, b) => b[value] - a[value])
-
+    
     this.setState({
       holidayData: filteredHolidayData,
       toggleReverse: newToggleReverse,

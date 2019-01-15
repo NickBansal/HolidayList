@@ -1,9 +1,7 @@
 import React from 'react'
 import '../Stylesheets/SortButtons.css'
 
-const SortButtons = ({ handleClick, sortValue }) => {
-    // const higlightedButton = 
-    // const style = {}
+const SortButtons = ({ handleClick }) => {
     return (
     <div className="SortButtons">
         <button value='title' onClick={(e) => handleClick(e.target.value)}>sort alphabetically</button>
