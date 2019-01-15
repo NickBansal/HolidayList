@@ -2,7 +2,7 @@
 
 Produce a HTML, CSS and JavaScript representation of the given `design.png` with the following features:
 
-- Sort the results by price (this should be the default)
+- [x] Sort the results by price (this should be the default)
 - Sort the results by star rating and highlighted when active
 - Sort the results alphabetically by hotel name and highlighted when active
 - Ability to toggle expanded hotel description
