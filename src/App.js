@@ -11,6 +11,11 @@ class App extends Component {
     }
     return (
       <div style={style} className='App'>
+      <div className="SortButtons">
+      <button>sort alphabetically</button>
+      <button>sort by prics</button>
+      <button>sort by star rating</button>
+      </div>
         {holidayData.map((info, i) => {
           return (
             <div key={i} className='HolidayInformation'>
