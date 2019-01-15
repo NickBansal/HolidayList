@@ -10,16 +10,23 @@ class App extends Component {
     }
     return (
       <div style={style} className='App'>
-        {console.log(holidayData)}
         {holidayData.map((info, i) => {
           return (
             <div key={i} className='HolidayInformation'>
-              <img src={info.img} alt='Holiday'/>
+              <img src={info.img} alt='Holiday' />
               <div className='HoldiayInformationTitle'>
-                <p>{info.title}</p>
+                <div className='Ratings'>
+                  <p><strong>{`${info.title} ${info.rating} Stars`}</strong></p>
+                  <p>{info.location}</p>
+                </div>
+                <div className='Price'>
+                  <p>holiday price</p>
+                  <h3>£{info.price}</h3>
+                </div>
               </div>
-              <div className="HolidaySpecifications">
-              <i class="fas fa-angle-right"></i>
+              <div className='HolidaySpecifications'>
+                <p></p>
+                <i className='fas fa-angle-right'></i>
               </div>
             </div>
           )
