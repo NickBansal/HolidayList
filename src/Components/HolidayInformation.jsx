@@ -15,12 +15,12 @@ const HolidayInformation = ({
   const arrow = !showDescription ? 'right' : 'down'
 
   return (
-    <div style={style} className="FullHolidayOrder">
+    <div style={style} className="FullHolidayList">
       {holidayData.map((info, i) => {
         return (
-          <div>
-            <div key={i} className='HolidayInformation'>
-              <img className='Holiday' src={info.img} alt='Holiday' />
+          <div className='HolidayWithDescription' key={i}>
+            <div className='HolidayInformation'>
+              <img className='HolidayImage' src={info.img} alt='Holiday' />
               <div className='HoldiayInformationTitle'>
                 <div className='Ratings'>
                   <p><strong>{info.title} </strong>
@@ -42,7 +42,8 @@ const HolidayInformation = ({
             </div>
             {holidayElement === i && showDescription &&
               <div className='HolidaySpecificationsDescription'>
-                <p>DESCRIPTION</p>
+                <p>{info.description}</p>
+                <button><strong>BOOK NOW</strong></button>
               </div>
             }
           </div>
