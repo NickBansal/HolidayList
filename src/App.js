@@ -25,7 +25,7 @@ class App extends Component {
                 </div>
               </div>
               <div className='HolidaySpecifications'>
-                <p></p>
+                <p>{`${info.date} for ${info.days} from ${info.airport}, ${info.specification}`}</p>
                 <i className='fas fa-angle-right'></i>
               </div>
             </div>

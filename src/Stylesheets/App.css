@@ -41,6 +41,12 @@
   left: 0;
   width: 100%;
   background: #00bbf7;
+  display: flex;
+}
+
+.HolidaySpecifications p {
+  margin: 0;
+  width: 80%
 }
 
 .Ratings {
