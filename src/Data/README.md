@@ -5,7 +5,7 @@ Produce a HTML, CSS and JavaScript representation of the given `design.png` with
 - [x] Sort the results by price (this should be the default)
 - [x] Sort the results by star rating
 - [x] Sort the results alphabetically by hotel name
-- Ability to toggle expanded hotel description
+- [x] Ability to toggle expanded hotel description
 - Highlight sort choices when active
 
 We are looking for a client side solution, there should be no server logic involved.

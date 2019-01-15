@@ -9,21 +9,21 @@
 .SortButtons button {
     width: 30%;
     outline: none; 
-    background: #dbf3e2;
-    color: #009bff;
-    font-size: 11px;
+    background: 	#B5EAF8;
+    color: #0051ff;
+    font-size: 12px;
     border: none;
     box-shadow: 1px 1px 3px #00000078
 }
   
 .SortButtons button:hover {
     cursor: pointer;
-    background: #c9f7d7;
+    background:rgb(169, 229, 245);;
 }
 
 .SortButtons button:focus {
     cursor: pointer;
     background: #009bff;
     color:  whitesmoke;
-    box-shadow: 1px 1px 3px #ffffffcb
+    box-shadow: inset 1px 1px 3px black
 }

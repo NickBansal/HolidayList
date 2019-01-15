@@ -17,13 +17,13 @@
 
 .HolidayInformation {
     position: relative;
-    height: 300px;
+    height: 260px;
     width: 400px;
     box-shadow: 0px 2px 5px #00000078;
 }
   
 .HolidayInformation img.HolidayImage {
-    height: 300px;
+    height: 100%;
     width: 100%;
 } 
   
@@ -87,6 +87,11 @@
     outline: none;
     border: none;
     color: white;
+}
+
+.HolidaySpecificationsDescription button:hover {
+    cursor: pointer;
+    background: #009bff
 }
 
 

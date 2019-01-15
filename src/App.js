@@ -51,7 +51,6 @@ class App extends Component {
   }
   
   toggleDescription = (holidayElement) => {
-    // console.log(e)
     this.setState({
       showDescription: !this.state.showDescription,
       holidayElement
