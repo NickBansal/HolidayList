@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Stylesheets/App.css'
 import background from './Stylesheets/Images/background.jpg'
 import holidayData from './Data'
+import stars from './Stylesheets/Images/gold-stars.png'
 
 class App extends Component {
   render() {
@@ -13,10 +14,13 @@ class App extends Component {
         {holidayData.map((info, i) => {
           return (
             <div key={i} className='HolidayInformation'>
-              <img src={info.img} alt='Holiday' />
+              <img className='Holiday' src={info.img} alt='Holiday' />
               <div className='HoldiayInformationTitle'>
                 <div className='Ratings'>
-                  <p><strong>{`${info.title} ${'*'.repeat(info.rating)}`}</strong></p>
+                  <p><strong>{info.title} </strong>
+                  {Array(info.rating).fill(<img className='StarsImage' src={stars} alt="stars" />)
+                  .map(star => star)}
+                  </p>
                   <p>{info.location}</p>
                 </div>
                 <div className='Price'>

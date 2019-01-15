@@ -18,7 +18,7 @@
   box-shadow: 0px 2px 5px #00000078;
 }
 
-.HolidayInformation img {
+.HolidayInformation img.Holiday {
   height: 100%;
   width: 100%;
 } 
@@ -106,4 +106,10 @@ span {
 .Price h3 {
   margin: 0;
   font-size: 15px
+}
+
+.StarsImage {
+  height: 15px;
+  width: 15px;
+  display: inline-block
 }
