@@ -4,12 +4,36 @@ import image3 from '../Stylesheets/Images/image_03.jpg'
 
 export default [
     { 
-        img: image1 
+        title: 'Costa Adeje Gran Hotel',
+        img: image1,
+        price: 1136.50,
+        date: '3 July 2014',
+        days: '7 days',
+        airport: 'East Midlands',
+        rating: 5,
+        specification: '2 Adults, 2 Children & 1 infant',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
     },
     { 
-        img: image2 
+        title: 'Aguamarina Golf Hotel And Apartments',
+        img: image2,
+        price: 499.99,
+        date: '3 July 2014',
+        days: '7 days',
+        airport: 'Manchester',
+        rating: 4,
+        specification: '2 Adults, 2 Children',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'  
     },
     { 
-        img: image3 
+        title: 'Laguna Park II',
+        img: image3,
+        price: 696.80,
+        date: '27 May 2014',
+        days: '7 days',
+        airport: 'Liverpool',
+        rating: 3,
+        specification: '2 Adults, 1 Child',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' 
     }
 ]

@@ -7,3 +7,12 @@
 .App h1 {
   margin: 0
 }
+
+.HolidayInformation {
+  margin: 40px
+}
+
+.HolidayInformation img {
+  height: 200px;
+  width: 350px;
+} 

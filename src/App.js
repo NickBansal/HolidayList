@@ -13,8 +13,8 @@ class App extends Component {
         {console.log(holidayData)}
         {holidayData.map((info, i) => {
           return (
-            <div key={i} className="holidayInformation">
-              <img src={info.img} alt="holiday"/>
+            <div key={i} className="HolidayInformation">
+              <img src={info.img} alt="Holiday"/>
             </div>
           )
         })}
