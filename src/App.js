@@ -16,7 +16,7 @@ class App extends Component {
               <img src={info.img} alt='Holiday' />
               <div className='HoldiayInformationTitle'>
                 <div className='Ratings'>
-                  <p><strong>{`${info.title} ${info.rating} Stars`}</strong></p>
+                  <p><strong>{`${info.title} ${'*'.repeat(info.rating)}`}</strong></p>
                   <p>{info.location}</p>
                 </div>
                 <div className='Price'>
@@ -25,7 +25,7 @@ class App extends Component {
                 </div>
               </div>
               <div className='HolidaySpecifications'>
-                <p>{`${info.date} for ${info.days} from ${info.airport}, ${info.specification}`}</p>
+                <p><span>{info.date}</span> for <span>{info.days}</span> from <span>{info.airport}</span>, <span>{info.specification}</span></p>
                 <i className='fas fa-angle-right'></i>
               </div>
             </div>
