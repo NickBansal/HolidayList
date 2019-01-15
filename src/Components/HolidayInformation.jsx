@@ -18,7 +18,7 @@ const HolidayInformation = ({ holidayData, toggleReverse }) => {
               <div className='HoldiayInformationTitle'>
                 <div className='Ratings'>
                   <p><strong>{info.title} </strong>
-                  {Array(info.rating).fill(<img className='StarsImage' src={stars} alt="stars" />)
+                  {Array(Number(info.rating)).fill(<img className='StarsImage' src={stars} alt="stars" />)
                   .map(star => star)}
                   </p>
                   <p>{info.location}</p>

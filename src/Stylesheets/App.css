@@ -46,12 +46,12 @@
 }
 
 .HolidaySpecifications p {
-  margin: 0;
+  margin: auto;
   width: 90%;
   padding: 5px;
   text-align: left;
   color: whitesmoke;
-  font-size: 13px
+  font-size: 11px
 }
 
 .HolidaySpecifications i {

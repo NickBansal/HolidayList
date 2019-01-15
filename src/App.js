@@ -3,6 +3,7 @@ import './Stylesheets/App.css'
 import background from './Stylesheets/Images/background.jpg'
 import holidayData from './Data'
 import HolidayInformation from './Components/HolidayInformation'
+import { alphaSort } from './utils'
 
 class App extends Component {
 
@@ -34,7 +35,10 @@ class App extends Component {
   handleClick = value => {
     const { holidayData, sortValue, toggleReverse } = this.state
     const newToggleReverse = sortValue !== value ? false : !toggleReverse
-    const filteredHolidayData = holidayData.sort((a, b) => b[value] - a[value])
+
+    const filteredHolidayData = value === 'title' ? 
+    holidayData.sort(alphaSort) : 
+    holidayData.sort((a, b) => b[value] - a[value])
 
     this.setState({
       holidayData: filteredHolidayData,
