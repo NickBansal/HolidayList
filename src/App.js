@@ -11,11 +11,12 @@ class App extends Component {
   state = {
     holidayData,
     toggleReverse: false,
-    sortValue: 'price'
+    sortValue: 'price',
+    showDescription: false
   }
 
   render() {
-    const { sortValue, toggleReverse, holidayData } = this.state
+    const { sortValue, toggleReverse, holidayData, showDescription } = this.state
     const style = {
       backgroundImage: `url(${background})`
     }
@@ -25,8 +26,10 @@ class App extends Component {
         sortValue={sortValue}
         handleClick={this.handleClick} />
         <HolidayInformation
-          toggleReverse={toggleReverse}
-          holidayData={holidayData} />
+        showDescription={showDescription}
+        toggleDescription={this.toggleDescription}
+        toggleReverse={toggleReverse}
+        holidayData={holidayData} />
       </div>
     );
   }
@@ -36,13 +39,19 @@ class App extends Component {
     const newToggleReverse = sortValue !== value ? false : !toggleReverse
 
     const filteredHolidayData = value === 'title' ?
-      holidayData.sort(alphaSort) :
-      holidayData.sort((a, b) => b[value] - a[value])
-    
+    holidayData.sort(alphaSort) :
+    holidayData.sort((a, b) => b[value] - a[value])
+
     this.setState({
       holidayData: filteredHolidayData,
       toggleReverse: newToggleReverse,
       sortValue: value
+    })
+  }
+  
+  toggleDescription = (e) => {
+    this.setState({
+      showDescription: !this.state.showDescription
     })
   }
 }

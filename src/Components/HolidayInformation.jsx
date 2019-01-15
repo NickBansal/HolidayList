@@ -2,7 +2,7 @@ import React from 'react'
 import stars from '../Stylesheets/Images/gold-stars.png'
 import '../Stylesheets/HolidayInformation.css'
 
-const HolidayInformation = ({ holidayData, toggleReverse }) => {
+const HolidayInformation = ({ holidayData, toggleReverse, toggleDescription, showDescription }) => {
 
     const thumbnailOrder = toggleReverse ? 'column-reverse' : 'column'
     const style = {
@@ -30,7 +30,7 @@ const HolidayInformation = ({ holidayData, toggleReverse }) => {
               </div>
               <div className='HolidaySpecifications'>
                 <p><span>{info.date}</span> for <span>{info.days}</span> from <span>{info.airport}</span>, <span>{info.specification}</span></p>
-                <i className='fas fa-angle-right'></i>
+                <i onClick={() => toggleDescription()} className='fas fa-angle-right'></i>
               </div>
             </div>
           )
