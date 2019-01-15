@@ -1,6 +1,6 @@
 import React from 'react'
 import stars from '../Stylesheets/Images/gold-stars.png'
-import '../Stylesheets/App.css'
+import '../Stylesheets/HolidayInformation.css'
 
 const HolidayInformation = ({ holidayData, toggleReverse }) => {
 

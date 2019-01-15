@@ -1,0 +1,27 @@
+.SortButtons {
+    width: 400px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px
+}
+  
+.SortButtons button {
+    width: 30%;
+    outline: none; 
+    background: #dbf3e2;
+    color: #4848fb;
+    font-size: 11px;
+    box-shadow: 0px 1px 4px;
+}
+  
+.SortButtons button:hover {
+    cursor: pointer;
+    background: #c9f7d7;
+}
+
+.SortButtons button:focus {
+    cursor: pointer;
+    background: #4848fb;
+    color:  #dbf3e2
+}
