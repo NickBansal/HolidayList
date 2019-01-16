@@ -35,14 +35,19 @@ const HolidayInformation = ({
 
               <div className='HolidaySpecifications'>
                 <p><span>{info.date}</span> for <span>{info.days}</span> from <span>{info.airport}</span>, <span>{info.specification}</span></p>
-                {holidayElement === i && showDescription && <i onClick={() => toggleDescription(i)} className={`fas fa-angle-down`}></i>}
-                {((holidayElement === i && !showDescription) || (holidayElement !== i && showDescription) ||
-                  (holidayElement !== i && !showDescription)) &&
-                  <i onClick={() => toggleDescription(i)} className={`fas fa-angle-right`}></i>
+                {
+                  holidayElement === info.title && showDescription &&
+                  <i onClick={() => toggleDescription(info.title)} className={`fas fa-angle-down`}></i>
+                }
+                {
+                  ((holidayElement === info.title && !showDescription) ||
+                    (holidayElement !== info.title && showDescription) ||
+                    (holidayElement !== info.title && !showDescription)) &&
+                  <i onClick={() => toggleDescription(info.title)} className={`fas fa-angle-right`}></i>
                 }
               </div>
             </div>
-            {holidayElement === i && showDescription &&
+            {holidayElement === info.title && showDescription &&
               <div className='HolidaySpecificationsDescription'>
                 <p>{info.description}</p>
                 <button><strong>BOOK NOW</strong></button>
