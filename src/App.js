@@ -50,10 +50,10 @@ class App extends Component {
     })
   }
   
-  toggleDescription = (holidayElement) => {
+  toggleDescription = (index) => {
     this.setState({
       showDescription: !this.state.showDescription,
-      holidayElement
+      holidayElement: index
     })
   }
 }
