@@ -10,6 +10,8 @@ Holiday List is a front end web application built in ReactJS. This project aims 
 - [x] Sort the results alphabetically by hotel name and highlighted when active
 - [x] Ability to toggle expanded hotel description
 
+***With the sort buttons you can click to sort the items into ascending order and click again to arrange in descending order, and repeat the process...***
+
 ## Installing a Local Copy
 
 These instructions will help you to get a copy of this project up and running on your local machine for testing purposes.
