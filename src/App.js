@@ -16,15 +16,15 @@ class App extends Component {
   }
 
   render() {
-    const { sortValue, toggleReverse, holidayData, showDescription, holidayElement } = this.state
+    const { toggleReverse, holidayData, showDescription, holidayElement } = this.state
     const style = {
       backgroundImage: `url(${background})`
     }
     return (
       <div style={style} className='App'>
         <SortButtons 
-        sortValue={sortValue}
         handleClick={this.handleClick} />
+
         <HolidayInformation
         holidayElement={holidayElement}
         showDescription={showDescription}
