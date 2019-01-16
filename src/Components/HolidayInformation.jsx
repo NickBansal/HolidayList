@@ -15,41 +15,42 @@ const HolidayInformation = ({
   return (
     <div style={style} className="FullHolidayList">
       {holidayData.map((info, i) => {
+        const { img, title, rating, location, price, date, days, airport, specification, description } = info
         return (
           <div className='HolidayWithDescription' key={i}>
             <div className='HolidayInformation'>
-              <img className='HolidayImage' src={info.img} alt='Holiday' />
+              <img className='HolidayImage' src={img} alt='Holiday' />
               <div className='HoldiayInformationTitle'>
                 <div className='Ratings'>
-                  <p><strong>{info.title} </strong>
-                    {Array(Number(info.rating)).fill(null)
+                  <p><strong>{title} </strong>
+                    {Array(Number(rating)).fill(null)
                       .map((item, index) => <img key={index} className='StarsImage' src={stars} alt="stars" />)}
                   </p>
-                  <p>{info.location}</p>
+                  <p>{location}</p>
                 </div>
                 <div className='Price'>
                   <p>holiday price</p>
-                  <h3>£{info.price}</h3>
+                  <h3>£{price}</h3>
                 </div>
               </div>
 
               <div className='HolidaySpecifications'>
-                <p><span>{info.date}</span> for <span>{info.days}</span> from <span>{info.airport}</span>, <span>{info.specification}</span></p>
+                <p><span>{date}</span> for <span>{days}</span> from <span>{airport}</span>, <span>{specification}</span></p>
                 {
-                  holidayElement === info.title && showDescription &&
-                  <i onClick={() => toggleDescription(info.title)} className={`fas fa-angle-down`}></i>
+                  holidayElement === title && showDescription &&
+                  <i onClick={() => toggleDescription(title)} className={`fas fa-angle-down`}></i>
                 }
                 {
-                  ((holidayElement === info.title && !showDescription) ||
-                    (holidayElement !== info.title && showDescription) ||
-                    (holidayElement !== info.title && !showDescription)) &&
-                  <i onClick={() => toggleDescription(info.title)} className={`fas fa-angle-right`}></i>
+                  ((holidayElement === title && !showDescription) ||
+                    (holidayElement !== title && showDescription) ||
+                    (holidayElement !== title && !showDescription)) &&
+                  <i onClick={() => toggleDescription(title)} className={`fas fa-angle-right`}></i>
                 }
               </div>
             </div>
-            {holidayElement === info.title && showDescription &&
+            {holidayElement === title && showDescription &&
               <div className='HolidaySpecificationsDescription'>
-                <p>{info.description}</p>
+                <p>{description}</p>
                 <button><strong>BOOK NOW</strong></button>
               </div>
             }
