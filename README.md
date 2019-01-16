@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Holiday List
 
-## Available Scripts
+## Front End React App
+Holiday List is a front end web application built in ReactJS. This project aims to showcase a single page application with som functionality added in. This project was built using ReactJS and CSS only
 
-In the project directory, you can run:
+## Checklist
 
-### `npm start`
+- [x] Sort the results by price (this should be the default)
+- [x] Sort the results by star rating and highlighted when active
+- [x] Sort the results alphabetically by hotel name and highlighted when active
+- [x] Ability to toggle expanded hotel description
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installing a Local Copy
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+These instructions will help you to get a copy of this project up and running on your local machine for testing purposes.
 
-### `npm test`
+### Installing
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Please ensure you have [Node.js](https://nodejs.org/en/download/) installed.
 
-### `npm run build`
+Duplicate or fork this repository from [https://github.com/NickBansal/HolidayList](https://github.com/NickBansal/HolidayList).
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Inside this new directory, install the required NPM packages:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```bash
+$ npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Run the application
 
-### `npm run eject`
+To start the application, run this command in the CLI:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+$ npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If successful, your browser should open [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Built With
 
-## Learn More
+* [Node.js](https://nodejs.org/) - JavaScript runtime built on [Chrome's V8 JavaScript engine](https://developers.google.com/v8/)
+* [React.js](https://reactjs.org/) - Facebook's JavaScript library for building user interfaces
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* **Nick Bansal** - *Full Stack Developer*
