@@ -12,8 +12,6 @@ const HolidayInformation = ({
     display: 'flex'
   }
 
-  const arrow = !showDescription ? 'right' : 'down'
-
   return (
     <div style={style} className="FullHolidayList">
       {holidayData.map((info, i) => {
@@ -37,7 +35,8 @@ const HolidayInformation = ({
 
               <div className='HolidaySpecifications'>
                 <p><span>{info.date}</span> for <span>{info.days}</span> from <span>{info.airport}</span>, <span>{info.specification}</span></p>
-                <i onClick={() => toggleDescription(i)} className={`fas fa-angle-${arrow}`}></i>
+                {holidayElement === i && <i onClick={() => toggleDescription(i)} className={`fas fa-angle-down`}></i>}
+                {holidayElement !== i && <i onClick={() => toggleDescription(i)} className={`fas fa-angle-right`}></i>}
               </div>
             </div>
             {holidayElement === i && showDescription &&

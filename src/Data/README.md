@@ -19,5 +19,3 @@ Things we like:
 - Semantic HTML
 - Modular CSS
 - Clean error free JavaScript
-
-![](design.png)
