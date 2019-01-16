@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> Component matches the snapshot 1`] = `
+<div
+  className="App"
+  style={
+    Object {
+      "backgroundImage": "url(background.jpg)",
+    }
+  }
+>
+  <SortButtons
+    handleClick={[Function]}
+    sortValue="price"
+  />
+  <HolidayInformation
+    holidayData={
+      Array [
+        Object {
+          "airport": "East Midlands",
+          "date": "3 July 2014",
+          "days": "7 days",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "img": "image_01.png",
+          "location": "Costa Adeje, Tenerife",
+          "price": "1136.50",
+          "rating": "5",
+          "specification": "2 Adults, 2 Children & 1 infant",
+          "title": "Costa Adeje Gran Hotel",
+        },
+        Object {
+          "airport": "Liverpool",
+          "date": "27 May 2014",
+          "days": "7 days",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "img": "image_03.jpg",
+          "location": "Costa Adeje, Tenerife",
+          "price": "696.80",
+          "rating": "3",
+          "specification": "2 Adults, 1 Child",
+          "title": "Laguna Park II",
+        },
+        Object {
+          "airport": "Manchester",
+          "date": "3 July 2014",
+          "days": "7 days",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "img": "image_02.png",
+          "location": "Costa Adeje, Tenerife",
+          "price": "499.99",
+          "rating": "4",
+          "specification": "2 Adults, 2 Children",
+          "title": "Aguamarina Golf Hotel And Apartments",
+        },
+      ]
+    }
+    showDescription={false}
+    toggleDescription={[Function]}
+    toggleReverse={false}
+  />
+</div>
+`;
