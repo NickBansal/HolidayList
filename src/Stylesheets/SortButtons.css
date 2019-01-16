@@ -27,3 +27,13 @@
     color:  whitesmoke;
     box-shadow: inset 1px 1px 3px black
 }
+
+@media (max-width: 500px) {
+    .SortButtons {
+        width: 300px;
+        height: 35px
+    }
+    .SortButtons button {
+        font-size: 8px
+    }
+}
