@@ -24,7 +24,7 @@ const SortButtons = ({ handleClick, sortByElement }) => {
                 <button 
                 style={style}
                 key={index} 
-                value='title' 
+                value={item.title}
                 onClick={e => handleClick(e.target.value, index)}>sort {item.sortBy}</button>
                 )
             })}

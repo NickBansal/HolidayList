@@ -1,11 +1,14 @@
 export default [
     {
-        sortBy: 'alphabetically'
+        sortBy: 'alphabetically',
+        title: 'title'
     },
     {
-        sortBy: 'by price'
+        sortBy: 'by price',
+        title: 'price'
     },
     {
-        sortBy: 'by star rating'
+        sortBy: 'by star rating',
+        title: 'rating'
     }
 ]
