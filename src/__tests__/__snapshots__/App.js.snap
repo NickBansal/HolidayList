@@ -17,6 +17,7 @@ exports[`<App /> Component matches the snapshot 1`] = `
     holidayData={
       Array [
         Object {
+          "_id": "id01",
           "airport": "East Midlands",
           "date": "3 July 2014",
           "days": "7 days",
@@ -29,6 +30,7 @@ exports[`<App /> Component matches the snapshot 1`] = `
           "title": "Costa Adeje Gran Hotel",
         },
         Object {
+          "_id": "id03",
           "airport": "Liverpool",
           "date": "27 May 2014",
           "days": "7 days",
@@ -41,6 +43,7 @@ exports[`<App /> Component matches the snapshot 1`] = `
           "title": "Laguna Park II",
         },
         Object {
+          "_id": "id02",
           "airport": "Manchester",
           "date": "3 July 2014",
           "days": "7 days",

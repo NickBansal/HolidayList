@@ -15,7 +15,10 @@ const HolidayInformation = ({
   return (
     <div style={style} className="FullHolidayList">
       {holidayData.map((info, i) => {
+
         const { img, title, rating, location, price, date, days, airport, specification, description, _id } = info
+        const arrow = holidayElement === _id && showDescription ? 'down' : 'right'
+
         return (
           <div className='HolidayWithDescription' key={i}>
             <div className='HolidayInformation'>
@@ -36,17 +39,11 @@ const HolidayInformation = ({
 
               <div className='HolidaySpecifications'>
                 <p><span>{date}</span> for <span>{days}</span> from <span>{airport}</span>, <span>{specification}</span></p>
-                {
-                  holidayElement === _id && showDescription &&
-                  <i onClick={() => toggleDescription(_id)} className='fas fa-angle-down'></i>
-                }
-                {
-                  !(holidayElement === _id && showDescription) &&
-                  <i onClick={() => toggleDescription(_id)} className='fas fa-angle-right'></i>
-                }
+                <i onClick={() => toggleDescription(_id)} className={`fas fa-angle-${arrow}`}></i>
               </div>
             </div>
-            {holidayElement === _id && showDescription &&
+            {
+              holidayElement === _id && showDescription &&
               <div className='HolidaySpecificationsDescription'>
                 <p>{description}</p>
                 <button><strong>BOOK NOW</strong></button>
