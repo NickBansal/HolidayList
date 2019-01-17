@@ -41,9 +41,7 @@ const HolidayInformation = ({
                   <i onClick={() => toggleDescription(title)} className='fas fa-angle-down'></i>
                 }
                 {
-                  ((holidayElement === title && !showDescription) ||
-                    (holidayElement !== title && showDescription) ||
-                    (holidayElement !== title && !showDescription)) &&
+                  !(holidayElement === title && showDescription) &&
                   <i onClick={() => toggleDescription(title)} className='fas fa-angle-right'></i>
                 }
               </div>
