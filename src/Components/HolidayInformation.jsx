@@ -38,13 +38,13 @@ const HolidayInformation = ({
                 <p><span>{date}</span> for <span>{days}</span> from <span>{airport}</span>, <span>{specification}</span></p>
                 {
                   holidayElement === title && showDescription &&
-                  <i onClick={() => toggleDescription(title)} className={`fas fa-angle-down`}></i>
+                  <i onClick={() => toggleDescription(title)} className='fas fa-angle-down'></i>
                 }
                 {
                   ((holidayElement === title && !showDescription) ||
                     (holidayElement !== title && showDescription) ||
                     (holidayElement !== title && !showDescription)) &&
-                  <i onClick={() => toggleDescription(title)} className={`fas fa-angle-right`}></i>
+                  <i onClick={() => toggleDescription(title)} className='fas fa-angle-right'></i>
                 }
               </div>
             </div>

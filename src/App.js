@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import './Stylesheets/App.css'
 import background from './Stylesheets/Images/background.jpg'
 import holidayData from './Data'
@@ -34,7 +34,7 @@ class App extends Component {
         toggleReverse={toggleReverse}
         holidayData={holidayData} />
       </div>
-    );
+    )
   }
 
   handleClick = (value, index) => {
@@ -61,4 +61,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
