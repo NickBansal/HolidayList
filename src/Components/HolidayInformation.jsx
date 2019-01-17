@@ -1,10 +1,9 @@
 import React from 'react'
-import stars from '../Stylesheets/Images/gold-stars.png'
 import '../Stylesheets/HolidayInformation.css'
+import ThumbnailHeader from '../Components/ThumbnailHeader'
+import ThumbnailFooter from '../Components/ThumbnailFooter'
 
-const HolidayInformation = ({
-  holidayData, toggleReverse,
-  toggleDescription, showDescription, holidayElement }) => {
+const HolidayInformation = ({ holidayData, toggleReverse,toggleDescription, showDescription, holidayElement }) => {
 
   const thumbnailOrder = toggleReverse ? 'column-reverse' : 'column'
   const style = {
@@ -23,24 +22,22 @@ const HolidayInformation = ({
           <div className='HolidayWithDescription' key={i}>
             <div className='HolidayInformation'>
               <img className='HolidayImage' src={img} alt='Holiday' />
-              <div className='HoldiayInformationTitle'>
-                <div className='Ratings'>
-                  <p><strong>{title} </strong>
-                    {Array(Number(rating)).fill(null)
-                      .map((item, index) => <img key={index} className='StarsImage' src={stars} alt="stars" />)}
-                  </p>
-                  <p>{location}</p>
-                </div>
-                <div className='Price'>
-                  <p>holiday price</p>
-                  <h3>£{price}</h3>
-                </div>
-              </div>
+              
+              <ThumbnailHeader 
+              title={title} 
+              rating={rating} 
+              location={location} 
+              price={price}/>
 
-              <div className='HolidaySpecifications'>
-                <p><span>{date}</span> for <span>{days}</span> from <span>{airport}</span>, <span>{specification}</span></p>
-                <i onClick={() => toggleDescription(_id)} className={`fas fa-angle-${arrow}`}></i>
-              </div>
+              <ThumbnailFooter 
+              date={date} 
+              days={days} 
+              airport={airport} 
+              specification={specification} 
+              toggleDescription={toggleDescription}
+              arrow={arrow}
+              _id={_id}/>
+ 
             </div>
             {
               holidayElement === _id && showDescription &&
