@@ -5,7 +5,6 @@ import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
 describe('<App />', () => {
-
   let wrapper 
   beforeEach(() => {
     wrapper = shallow(<App />)

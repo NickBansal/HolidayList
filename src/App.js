@@ -40,11 +40,12 @@ class App extends Component {
   handleClick = (value, index) => {
     const { holidayData, sortValue, toggleReverse } = this.state
     const newToggleReverse = sortValue !== value ? false : !toggleReverse
-    const filteredHolidayData = value === 'title' ?
+    const sortedHolidayData = value === 'title' ?
     holidayData.sort(alphaSort) :
     holidayData.sort((a, b) => b[value] - a[value])
+
     this.setState({
-      holidayData: filteredHolidayData,
+      holidayData: sortedHolidayData,
       toggleReverse: newToggleReverse,
       sortValue: value,
       sortByElement: index
