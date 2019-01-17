@@ -11,7 +11,7 @@ exports[`<App /> Component matches the snapshot 1`] = `
 >
   <SortButtons
     handleClick={[Function]}
-    sortValue="price"
+    sortByElement={1}
   />
   <HolidayInformation
     holidayData={

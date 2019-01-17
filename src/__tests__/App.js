@@ -39,12 +39,14 @@ describe('<App />', () => {
     expect(wrapper.state().showDescription).toBe(true)
     expect(wrapper.state().holidayElement).toBe(1)
     wrapper.instance().toggleDescription(2)
-    expect(wrapper.state().showDescription).toBe(false)
+    expect(wrapper.state().showDescription).toBe(true)
     expect(wrapper.state().holidayElement).toBe(2)
     wrapper.instance().toggleDescription(3)
     expect(wrapper.state().showDescription).toBe(true)
     expect(wrapper.state().holidayElement).toBe(3)
-  
+    wrapper.instance().toggleDescription(3)
+    expect(wrapper.state().showDescription).toBe(false)
+    expect(wrapper.state().holidayElement).toBe(3)
  
   })
 })
