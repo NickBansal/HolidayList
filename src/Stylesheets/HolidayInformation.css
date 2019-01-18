@@ -52,7 +52,7 @@
     font-size: 11px
 }
   
-.HolidaySpecifications i {
+.HolidaySpecifications button {
     margin: 0;
     width: 10%;
     display: -webkit-box;
@@ -67,7 +67,15 @@
     padding: 5px 10px;
     font-size: 30px;
     color: whitesmoke;
+    background: #0098ff;
+    border: none;
+    outline: none
 }
+
+.HolidaySpecifications button:hover {
+    cursor: pointer;
+}
+
 
 .HolidayWithDescription {
     display: -webkit-box;
@@ -117,17 +125,17 @@
 
 .Ratings {
     width: 70%;
-    margin: 5px
+    margin: 5px;
+    text-align: left
 }
   
-.Ratings p:nth-of-type(1) {
-    text-align: left;
+.Ratings h1 {
     font-size: 14px
 }
   
-.Ratings p:nth-of-type(2) {
-    text-align: left;
-    font-size: 11px
+.Ratings h2 {
+    font-size: 11px;
+    margin: 0
 }
   
 .Ratings h5 {
@@ -173,9 +181,6 @@ span {
     display: inline-block
 }
 
-i:hover {
-    cursor: pointer;
-}
 
 @media (max-width: 500px) {
     .HolidayInformation {

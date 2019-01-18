@@ -4,7 +4,7 @@ const ThumbnailFooter = ({ date, days, airport, specification, toggleDescription
     return (
         <div className='HolidaySpecifications'>
             <p><span>{date}</span> for <span>{days}</span> from <span>{airport}</span>, <span>{specification}</span></p>
-            <i onClick={() => toggleDescription(_id)} className={`fas fa-angle-${arrow}`}></i>
+            <button onClick={() => toggleDescription(_id)}><i className={`fas fa-angle-${arrow}`}></i></button>
         </div>
     )
 }
