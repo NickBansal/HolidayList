@@ -42,8 +42,8 @@ const HolidayInformation = ({ holidayData, toggleReverse,toggleDescription, show
             {
               holidayElement === _id && showDescription &&
               <div className='HolidaySpecificationsDescription'>
-                <p>{description}</p>
-                <button><strong>BOOK NOW</strong></button>
+                <p className='HiddenDescription'>{description}</p>
+                <button className='HiddenButton'><strong>BOOK NOW</strong></button>
               </div>
             }
           </div>

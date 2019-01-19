@@ -5,17 +5,17 @@ const ThumbnailHeader = ({ title, rating, location, price }) => {
     return (
         <div className='HoldiayInformationTitle'>
             <div className='Ratings'>
-                <h1><strong>{title} </strong>
+                <h1 className='RatingsTitle'><strong>{title} </strong>
                     {
                         Array(Number(rating)).fill(null)
                             .map((item, index) => <img key={index} className='StarsImage' src={stars} alt="stars" />)
                     }
                 </h1>
-                <h2>{location}</h2>
+                <h2 className='RatingsLocation'>{location}</h2>
             </div>
             <div className='Price'>
-                <p>holiday price</p>
-                <h3>£{price}</h3>
+                <p className='HolidayPriceText'>holiday price</p>
+                <h3 className='HolidayPriceValue'>£{price}</h3>
             </div>
         </div>
     )
