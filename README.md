@@ -1,7 +1,7 @@
 # Holiday List
 
 ## Front End React App
-Holiday List is a front end web application built in ReactJS. This project aims to showcase a single page application with som functionality added in. This project was built using ReactJS and CSS only
+Holiday List is a front end web application built in ReactJS. This project aims to showcase a single page application with som functionality added in. This project was built using ReactJS and CSS (Using B.E.M for naming conventions)
 
 ## Checklist
 
