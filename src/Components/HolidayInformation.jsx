@@ -4,7 +4,7 @@ import ThumbnailHeader from '../Components/ThumbnailHeader'
 import ThumbnailFooter from '../Components/ThumbnailFooter'
 
 const HolidayInformation = ({ holidayData, toggleReverse,toggleDescription, showDescription, holidayElement }) => {
-
+  
   const thumbnailOrder = toggleReverse ? 'column-reverse' : 'column'
   const style = {
     flexDirection: thumbnailOrder,
@@ -14,10 +14,8 @@ const HolidayInformation = ({ holidayData, toggleReverse,toggleDescription, show
   return (
     <div style={style} className="FullHolidayList">
       {holidayData.map((info, i) => {
-
         const { img, title, rating, location, price, date, days, airport, specification, description, _id } = info
         const arrow = holidayElement === _id && showDescription ? 'down' : 'right'
-
         return (
           <div className='HolidayWithDescription' key={i}>
             <div className='HolidayInformation'>
@@ -41,9 +39,9 @@ const HolidayInformation = ({ holidayData, toggleReverse,toggleDescription, show
             </div>
             {
               holidayElement === _id && showDescription &&
-              <div className='HolidaySpecificationsDescription'>
-                <p className='HiddenDescription'>{description}</p>
-                <button className='HiddenButton'><strong>BOOK NOW</strong></button>
+              <div className='toggleInformation'>
+                <p className='toggleInformation__description'>{description}</p>
+                <button className='toggleInformation__bookNow'><strong>BOOK NOW</strong></button>
               </div>
             }
           </div>
