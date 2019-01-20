@@ -2,28 +2,14 @@ import React from 'react'
 import '../Stylesheets/SortButtons.css'
 import buttonData from '../Data/buttonData'
 
-const styleSelected = {
-    cursor: 'pointer',
-    background: '#009bff',
-    color:  'whitesmoke',
-    boxShadow: 'inset 1px 1px 3px black'
-}
-
-const styleNotSelected = {
-    background: '#B5EAF8',
-    color: '#0051ff',
-    boxShadow: '1px 1px 3px #00000078'
-}
-
 const SortButtons = ({ handleClick, sortByElement }) => {
     return (
         <div className="allButtons">
             {buttonData.map((item, index) => {
-                const style = index === sortByElement ? styleSelected : styleNotSelected
+                const newClassName = index === sortByElement ? 'allButtons__sort buttons--selected' : 'allButtons__sort buttons--notSelected'
                 return (
                 <button 
-                className='allButtons__sort'
-                style={style}
+                className={newClassName}
                 key={index} 
                 value={item.title}
                 onClick={e => handleClick(e.target.value, index)}>sort {item.sortBy}</button>
