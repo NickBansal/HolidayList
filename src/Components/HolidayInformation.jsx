@@ -3,8 +3,8 @@ import '../Stylesheets/HolidayInformation.css'
 import ThumbnailHeader from '../Components/ThumbnailHeader'
 import ThumbnailFooter from '../Components/ThumbnailFooter'
 
-const HolidayInformation = ({ holidayData, toggleReverse,toggleDescription, showDescription, holidayElement }) => {
-  
+const HolidayInformation = ({ holidayData, toggleReverse, toggleDescription, showDescription, holidayElement }) => {
+
   const thumbnailOrder = toggleReverse ? 'column-reverse' : 'column'
   const style = {
     flexDirection: thumbnailOrder,
@@ -19,23 +19,23 @@ const HolidayInformation = ({ holidayData, toggleReverse,toggleDescription, show
         return (
           <div className='holidayCard__withDescription' key={i}>
             <div className='holidayCard__information'>
-              <img className='holidayCard__image' src={img} alt='Holiday' />
-              
-              <ThumbnailHeader 
-              title={title} 
-              rating={rating} 
-              location={location} 
-              price={price}/>
+              <img className='holidayCard__information__image' src={img} alt='Holiday' />
 
-              <ThumbnailFooter 
-              date={date} 
-              days={days} 
-              airport={airport} 
-              specification={specification} 
-              toggleDescription={toggleDescription}
-              arrow={arrow}
-              _id={_id}/>
- 
+              <ThumbnailHeader
+                title={title}
+                rating={rating}
+                location={location}
+                price={price} />
+
+              <ThumbnailFooter
+                date={date}
+                days={days}
+                airport={airport}
+                specification={specification}
+                toggleDescription={toggleDescription}
+                arrow={arrow}
+                _id={_id} />
+
             </div>
             {
               holidayElement === _id && showDescription &&
