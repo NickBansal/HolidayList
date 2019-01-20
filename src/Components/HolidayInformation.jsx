@@ -19,7 +19,7 @@ const HolidayInformation = ({ holidayData, toggleReverse, toggleDescription, sho
         return (
           <div className='holidayCard__withDescription' key={i}>
             <div className='holidayCard__information'>
-              <img className='holidayCard__information__image' src={img} alt='Holiday' />
+              <img className='holidayCard__image' src={img} alt='Holiday' />
 
               <ThumbnailHeader
                 title={title}
