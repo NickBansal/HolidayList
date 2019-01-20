@@ -3,19 +3,19 @@ import stars from '../Stylesheets/Images/gold-stars.png'
 
 const ThumbnailHeader = ({ title, rating, location, price }) => {
     return (
-        <div className='HoldiayInformationTitle'>
-            <div className='Ratings'>
-                <h1 className='RatingsTitle'><strong>{title} </strong>
+        <div className='holidayHeader'>
+            <div className='holidayHeader__ratings'>
+                <h1 className='holidayHeader__ratings__hotel'><strong>{title} </strong>
                     {
                         Array(Number(rating)).fill(null)
-                            .map((item, index) => <img key={index} className='StarsImage' src={stars} alt="stars" />)
+                            .map((item, index) => <img key={index} className='holidayHeader__ratings__stars' src={stars} alt="stars" />)
                     }
                 </h1>
-                <h2 className='RatingsLocation'>{location}</h2>
+                <h2 className='holidayHeader__ratings__location'>{location}</h2>
             </div>
-            <div className='Price'>
-                <p className='HolidayPriceText'>holiday price</p>
-                <h3 className='HolidayPriceValue'>£{price}</h3>
+            <div className='holidayHeader__price'>
+                <p className='holidayHeader__price__text'>holiday price</p>
+                <h3 className='holidayHeader__price__value'>£{price}</h3>
             </div>
         </div>
     )

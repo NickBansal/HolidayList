@@ -1,10 +1,10 @@
-.FullHolidayList {
+.holidayCard {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
  
-.HoldiayInformationTitle {
+.holidayHeader {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,28 +15,28 @@
     display: flex;
 }
 
-.Ratings {
+.holidayHeader__ratings {
     width: 70%;
     margin: 5px;
     text-align: left
 }
   
-.Ratings .RatingsTitle {
+.holidayHeader__ratings__hotel {
     font-size: 14px
 }
   
-.Ratings .RatingsLocation {
+.holidayHeader__ratings__location {
     font-size: 11px;
     margin: 0
 }
 
-.StarsImage {
+.holidayHeader__ratings__stars {
     height: 15px;
     width: 15px;
     display: inline-block
 }
 
-.Price {
+.holidayHeader__price {
     width: 30%;
     border-left: 2px solid blue;
     background: gold;
@@ -55,18 +55,18 @@
             align-items: center;
 }
   
-.Price .HolidayPriceText {
+.holidayHeader__price__text {
     margin: 0;
     font-size: 10px
 }
   
-.Price .HolidayPriceValue {
+.holidayHeader__price__value {
     margin: 0;
     font-size: 15px
 }
 
 
-.HolidayInformation {
+.holidayCard__information {
     position: relative;
     height: 260px;
     width: 400px;
@@ -74,7 +74,7 @@
             box-shadow: 0px 2px 5px #00000078;
 }
   
-.HolidayInformation .HolidayImage {
+.holidayCard__image {
     height: 100%;
     width: 100%;
 } 
@@ -99,7 +99,7 @@
     font-size: 11px
 }
   
-.specification__toggle {
+.specifications__toggle {
     margin: 0;
     width: 10%;
     display: -webkit-box;
@@ -119,12 +119,12 @@
     outline: none
 }
 
-.specification__toggle:hover {
+.specifications__toggle:hover {
     cursor: pointer;
 }
 
 
-.HolidayWithDescription {
+.holidayCard__withDescription {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -172,11 +172,11 @@
   
   
 @media (max-width: 500px) {
-    .HolidayInformation {
+    .holidayCard__information {
         height: 220px;
         width: 300px;
     }
-    .HolidayWithDescription {
+    .holidayCard__withDescription {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
@@ -187,7 +187,7 @@
     .specifications__paragraph{
         font-size: 9px
     }
-    .specification__icon {
+    .specifications__icon {
         padding: 0;
         font-size: 20px;
     }
@@ -202,16 +202,16 @@
         width: 85px;
         height: 20px
     }
-    .Ratings .RatingsTitle{
+    .holidayHeader__ratings__hotel {
         font-size: 10px
     }
-    .Ratings .RatingsLocation {
+    .holidayHeader__ratings__location {
         font-size: 9px
     }
-    .Price .HolidayPriceValue {
+    .holidayHeader__price__value {
         font-size: 13px
     }
-    .StarsImage {
+    .holidayHeader__ratings__stars {
         height: 12px;
         width: 12px;
     }

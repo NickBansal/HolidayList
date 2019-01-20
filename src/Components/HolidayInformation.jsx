@@ -12,14 +12,14 @@ const HolidayInformation = ({ holidayData, toggleReverse,toggleDescription, show
   }
 
   return (
-    <div style={style} className="FullHolidayList">
+    <div style={style} className="holidayCard">
       {holidayData.map((info, i) => {
         const { img, title, rating, location, price, date, days, airport, specification, description, _id } = info
         const arrow = holidayElement === _id && showDescription ? 'down' : 'right'
         return (
-          <div className='HolidayWithDescription' key={i}>
-            <div className='HolidayInformation'>
-              <img className='HolidayImage' src={img} alt='Holiday' />
+          <div className='holidayCard__withDescription' key={i}>
+            <div className='holidayCard__information'>
+              <img className='holidayCard__image' src={img} alt='Holiday' />
               
               <ThumbnailHeader 
               title={title} 
