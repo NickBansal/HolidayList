@@ -17,11 +17,12 @@ const styleNotSelected = {
 
 const SortButtons = ({ handleClick, sortByElement }) => {
     return (
-        <div className="SortButtons">
+        <div className="allButtons">
             {buttonData.map((item, index) => {
                 const style = index === sortByElement ? styleSelected : styleNotSelected
                 return (
                 <button 
+                className='allButtons__sort'
                 style={style}
                 key={index} 
                 value={item.title}

@@ -1,4 +1,4 @@
-.SortButtons {
+.allButtons {
     width: 400px;
     height: 40px;
     display: -webkit-box;
@@ -10,24 +10,24 @@
     margin-bottom: 20px
 }
   
-.SortButtons button {
+.allButtons__sort {
     width: 30%;
     outline: none; 
     font-size: 12px;
     border: none;
 }
   
-.SortButtons button:hover {
+.allButtons__sort:hover {
     cursor: pointer;
     background:rgb(169, 229, 245);;
 }
 
 @media (max-width: 500px) {
-    .SortButtons {
+    .allButtons {
         width: 300px;
         height: 35px
     }
-    .SortButtons button {
+    .allButtons__sort {
         font-size: 9px;
         width: 32%;
         font-weight: 900;
