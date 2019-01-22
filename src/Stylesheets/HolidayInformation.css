@@ -78,6 +78,18 @@
     height: 100%;
     width: 100%;
 } 
+
+.holidayCard__withDescription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 400px;
+    margin: 10px
+}
   
 .specifications {
     position: absolute;
@@ -121,19 +133,6 @@
 
 .specifications__toggle:hover {
     cursor: pointer;
-}
-
-
-.holidayCard__withDescription {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 400px;
-    margin: 10px
 }
 
 .toggleInformation {
@@ -208,11 +207,11 @@
     .holidayHeader__location {
         font-size: 9px
     }
-    .price__value {
-        font-size: 13px
-    }
     .holidayHeader__stars {
         height: 12px;
         width: 12px;
+    }
+    .price__value {
+        font-size: 13px
     }
 }
