@@ -17,14 +17,14 @@
     border: none;
 }
   
-.buttons--selected {
+.allButtons__sort--selected {
     cursor: pointer;
     background: #009bff;
     color: whitesmoke;
     box-shadow: inset 1px 1px 3px black;
 }
 
-.buttons--notSelected {
+.allButtons__sort--notSelected {
     cursor: pointer;
     background: #B5EAF8;
     color: #0051ff;

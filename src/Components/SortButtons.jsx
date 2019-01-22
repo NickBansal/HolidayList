@@ -6,10 +6,10 @@ const SortButtons = ({ handleClick, sortByElement }) => {
     return (
         <div className="allButtons">
             {buttonData.map((item, index) => {
-                const newClassName = index === sortByElement ? 'buttons--selected' : 'buttons--notSelected'
+                const newClassName = index === sortByElement ? 'selected' : 'notSelected'
                 return (
                 <button 
-                className={`allButtons__sort ${newClassName}`}
+                className={`allButtons__sort allButtons__sort--${newClassName}`}
                 key={index} 
                 value={item.title}
                 onClick={e => handleClick(e.target.value, index)}>sort {item.sortBy}</button>
